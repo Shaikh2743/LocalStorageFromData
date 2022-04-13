@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>USer Login Form</title>
+    <link type="text/css" rel="stylesheet" href="Form.css" />
+    <link rel="text/javascript" href="Form.js">
+</head>
+
+<body>
+    <div id="container">
+        <form>
+            <p><input type="text" class="box" value="" placeholder=" Enter UserName" id="username" /></p>
+            <p><input type="email" class="box" value="" placeholder=" Enter Your Mail" id="mail" /></p>
+            <p><input type="password" class="box" value="" placeholder=" Enter Password" id="pass" /></p>
+            <!-- <p style="text-align:center"><input type="submit" id="button" /></p> -->
+            <button class="btn  btn-success" id="add" value="add">Add</button>
+        </form>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+    <script>
+         let arr = []
+
+
+        // we are making an todo list function
+
+        document.getElementById("add").onclick = (e) => {
+
+
+            let item = document.getElementById("text").value
+            let item1 = document.getElementById("text1").value
+            let item2= document.getElementById("text2").value
+
+            arr.push(item, item1, item2)
+
+            localStorage.setItem("task", JSON.stringify(arr))
+
+
+
+            // 
+
+            // console.log(getitem)
+
+            e.preventDefault()
+
+        }
+    </script>
+</body>
+
+</html>

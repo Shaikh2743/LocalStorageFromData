@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+
+
+    <!-- Latest compiled and minified CSS & JS -->
+
+    <link rel="stylesheet" media="screen" href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+    <script src="//code.jquery.com/jquery.js"></script>
+
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+
+
+</head>
+
+<body>
+
+    <div class="form-group">
+
+        <label for="">type below :</label>
+
+        <input type="text" class="form-control" name="" id="text"  placeholder="">
+
+        <input type="number" class="form-control" name="" id="text1"  placeholder="">
+
+        <input type="email" class="form-control" name="" id="text2"  placeholder="">
+
+        <input type="password" class="form-control" name="" id="text3"  placeholder="">
+
+
+        <button class="btn  btn-success" id="add" value="add">Add</button>
+
+        <!-- <p id="task">Submit</p> -->
+
+    </div>
+
+    <script src="file.js"></script>
+    <script>
+        let arr = []
+
+
+        // we are making an todo list function
+
+        document.getElementById("add").onclick = (e) => {
+
+
+            let item = document.getElementById("text").value
+            let item1 = document.getElementById("text1").value
+            let item2= document.getElementById("text2").value
+            let item3= document.getElementById("text3").value
+
+            arr.push(item, item1, item2, item3)
+
+             localStorage.setItem("task", JSON.stringify(arr))
+
+
+
+            // 
+
+            // console.log(getitem)
+
+            e.preventDefault()
+
+        }
+    </script>
+
+</body>
+
+</html>
